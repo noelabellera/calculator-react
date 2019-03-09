@@ -1,0 +1,30 @@
+.Board {
+    height: 800px;
+    width: 400px;
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+table {
+    margin: auto 0;
+}
+
+th {
+    height: 75px;
+    width: 75px;
+    border: solid black 2px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+th:hover {
+    background: dodgerblue;
+    transition: 0.25s;
+    transform: scale(1.1);
+    cursor: pointer;
+    color: white;
+}
+
