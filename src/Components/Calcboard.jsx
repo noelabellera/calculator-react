@@ -8,21 +8,42 @@ class Calculator extends Component {
         super(props);
         this.state = ({
             total: '',
-            num: '0',
+            num: '',
             num2: '',
-            init: '0'
+            init: ''
         })
     }
 
-    clickOne = () => {
-        console.log(this.state.num)
+    clickOne = (e) => {
         this.setState({
-            total: '1' + this.state.total,
+            total: + this.state.total + '1' ,
+            num: this.state.total
        
             
         })
-        console.log(this.state.num)
+        // this.state.num = this.state.total
   
+    }
+
+    clickTwo = () => {
+        this.setState({
+            total: this.state.total + '2',
+            num: this.state.total
+       
+            
+        })
+        // this.state.num = this.state.total
+  
+    }
+
+    clickClear = () => {
+        this.setState({
+            total: '',
+            num: '',
+            num1: ''
+        })
+        console.log("This is it after clear " + this.state.num)
+        console.log("This is it after clear again " + this.state.num)
     }
 
 
@@ -31,12 +52,15 @@ class Calculator extends Component {
     render() {
         return (
             <div className="Board">
+                console.log()
                 <h3>This is the calculator</h3>
                 <div id="resultsDisplay">
                     <h1 id="results">{this.state.total}</h1>
                 </div>
                 <NumberBoard 
                     clickOne={this.clickOne}
+                    clickTwo={this.clickTwo}
+                    clickClear={this.clickClear}
                 />
 
 

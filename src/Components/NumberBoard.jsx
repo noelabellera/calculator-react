@@ -20,7 +20,7 @@ const NumberBoard = (props) => {
         </tr>
         <tr>
             <th id="three">3</th>
-            <th id="two">2</th>
+            <th id="two" onClick={props.clickTwo}>2</th>
             <th id="one" onClick={props.clickOne}>1</th>
             <th id="sub">-</th>
         </tr>
@@ -34,7 +34,7 @@ const NumberBoard = (props) => {
 
         <tr>
             <th id="back">Back</th>
-            <th id="clear">Clear</th>
+            <th id="clear" onClick={props.clickClear}>Clear</th>
         </tr>
 
     </tbody>

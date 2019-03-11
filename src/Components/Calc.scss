@@ -28,3 +28,13 @@ th:hover {
     color: white;
 }
 
+#resultsDisplay {
+    height: 65px;
+    width: 300px;
+    border: solid black 2px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    padding: 7px;
+}
+
