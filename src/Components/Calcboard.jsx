@@ -7,23 +7,33 @@ class Calculator extends Component {
     constructor(props) {
         super(props);
         this.state = ({
-            num: 0
+            total: '',
+            num: '0',
+            num2: '',
+            init: '0'
         })
     }
 
     clickOne = () => {
-        console.log("this is one")
+        console.log(this.state.num)
         this.setState({
-            num: 1
+            total: '1' + this.state.total,
+       
+            
         })
+        console.log(this.state.num)
+  
     }
+
+
+
 
     render() {
         return (
             <div className="Board">
                 <h3>This is the calculator</h3>
                 <div id="resultsDisplay">
-                    <h1 id="results">{this.state.num}</h1>
+                    <h1 id="results">{this.state.total}</h1>
                 </div>
                 <NumberBoard 
                     clickOne={this.clickOne}
